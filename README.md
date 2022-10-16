@@ -17,8 +17,21 @@ Create an entertainment application for users to view Movie and TV series. Creat
 - **Bonus** Full stack application
     - Login/Sign Up capability
 
+## Process
+
+1. Create the component
+2. Input all the static information and a single temporary dynamic information (if available)
+3. Style the component
+4. Create all the effect
+5. Make the single temporary dynamic information into complete dynamic (if available)
+6. Repeat until all the components/pages are created
+
 ## Technologies
 
 ### Run 
 
 `yarn start` or `npm start`
+
+### Packages
+- SASS
+- react-bootstrap

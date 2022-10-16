@@ -1,0 +1,15 @@
+.searchbar {
+    span, .form-control {
+        background-color: transparent;
+        border: none;
+        padding-left: 0;
+    }
+    .form-control {
+        color: #FFFFFF;
+        &:focus {
+            color: #FFFFFF;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+}
