@@ -4,15 +4,13 @@ import '../sass/home.scss'
 
 export default function Home() {
     return(
-        <>
-        <SearchBar/>
         <Container fluid id='home'>
-            <Row>
+            <SearchBar/>
+            <Row id='trending'>
                 <Col>
-                    <Home/>
+                    hi
                 </Col>
             </Row>
         </Container>
-        </>
     );
 }
