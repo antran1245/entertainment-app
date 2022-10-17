@@ -1,24 +1,18 @@
-import { Container, Row, Col, InputGroup, Form } from 'react-bootstrap'
-import search from '../assets/icon-search.svg'
+import { Container, Row, Col } from 'react-bootstrap'
+import SearchBar from './SearchBar'
 import '../sass/home.scss'
 
 export default function Home() {
     return(
-        <Container fluid className='home'>
+        <>
+        <SearchBar/>
+        <Container fluid id='home'>
             <Row>
-                <Col className='pt-5'>
-                    <Row>
-                        <Col>
-                            <InputGroup className='searchbar'>
-                                <InputGroup.Text>
-                                    <img src={search} alt="search" />
-                                </InputGroup.Text>
-                                <Form.Control placeholder='Search for movies or TV series'/>
-                            </InputGroup>
-                        </Col>
-                    </Row>
+                <Col>
+                    <Home/>
                 </Col>
             </Row>
         </Container>
+        </>
     );
 }

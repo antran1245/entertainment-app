@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   background-color: #10141E;
-  /* scrollbar-width: none; */
+  scrollbar-width: none;
+  color: #FFFFFF;
+  font-family: 'Outfit', 'normal';
 }
 *::-webkit-scrollbar {
   display: none;
