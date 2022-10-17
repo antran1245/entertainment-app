@@ -4,7 +4,7 @@ import '../sass/searchbar.scss'
 
 export default function SearchBar() {
     return(
-        <Row>
+        <Row className='w-100'>
             <Col>
                 <InputGroup className='searchbar'>
                 <InputGroup.Text>

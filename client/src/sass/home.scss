@@ -1,2 +1,24 @@
 #home {
+    padding-right: 0;
+    #trending {
+        margin-top: 34px;
+        display: block;
+        div {
+            padding-right: 0;
+        }
+    }
+    .trending-content {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        img {
+            width: 470px;
+        }
+    }
+    h2 {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 40px;
+        letter-spacing: -0.5px;
+    }
 }
