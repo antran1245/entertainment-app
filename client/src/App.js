@@ -7,10 +7,10 @@ function App() {
   return (
     <Container fluid>
       <Row>
-        <Col lg={1} className={"pt-4 ps-4 me-lg-5 me-xl-2 me-xxl-0 nav-col"}>
+        <Col md={1} lg={1} xl={1} xxl={1} className={"pt-4 p-0 nav-col d-flex justify-content-center"}>
           <Navigation/>
         </Col>
-        <Col lg={11} id='main-content'>
+        <Col md={12} lg={11} xl={11} xxl={11} id='main-content p-0'>
           <Home/>
         </Col>
       </Row>
