@@ -11,11 +11,13 @@ export default function Home() {
                     <h2>Trending</h2>
                 </div>
                 <div className='trending-content'>
-                    <img src={require('../assets/thumbnails/112/regular/large.jpg')} alt="112"/>
-                    <img src={require('../assets/thumbnails/112/regular/large.jpg')} alt="112"/>
-                    <img src={require('../assets/thumbnails/112/regular/large.jpg')} alt="112"/>
-                    <img src={require('../assets/thumbnails/112/regular/large.jpg')} alt="112"/>
-                    <img src={require('../assets/thumbnails/112/regular/large.jpg')} alt="112"/>
+                    <Card className='bg-dark text-white'>
+                        <Card.Img src={require('../assets/thumbnails/112/regular/large.jpg')} alt="112"/>
+                        <Card.ImgOverlay>
+                            <Card.Text>hi</Card.Text>
+                        </Card.ImgOverlay>
+                    </Card>
+                    
                 </div>
             </Row>
         </Container>
