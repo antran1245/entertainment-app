@@ -6,9 +6,10 @@
     }
 }
 .trending-content {
-    overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
+    margin-left: 12px;
+    width: calc(100% - 12px) !important;
     .card {
         min-width: 470px;
         height: 230px;
@@ -58,6 +59,14 @@
                     font-size: 15px;
                     font-weight: 300;
                     line-height: 19px;
+                }
+            }
+            .info .catergory {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img {
+                    margin-right: 6px;
                 }
             }
             .title {
