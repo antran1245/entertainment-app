@@ -5,10 +5,11 @@
         padding-right: 0;
     }
 }
-.trending-content {
+#trending-content {
     overflow-y: hidden;
     display: flex;
     margin-left: 12px;
+    margin-top: 25px;
     width: calc(100% - 12px) !important;
     .card {
         min-width: 470px;

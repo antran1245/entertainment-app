@@ -16,10 +16,10 @@ export default function Trending() {
             <div>
                 <h2>Trending</h2>
             </div>
-            <div className='trending-content ps-0'>
+            <div id='trending-content' className='ps-0'>
                 {trending.map((item, index) => {
                     return <Card className='bg-dark text-white' key={index}>
-                        <Card.Img src={require('../assets/thumbnails'+imagesSmall[index])} alt="112" height="100%"/>
+                        <Card.Img src={require('../assets/thumbnails'+imagesSmall[index])} alt={item.title} height="100%"/>
                         <Card.ImgOverlay>
                             <Card.Text className='bookmark'>
                                 <img src={item.isBookmarked? bookmarkFull : bookmarkEmpty} alt="bookmarkEmpty-icon"/>
