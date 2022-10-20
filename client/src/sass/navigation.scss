@@ -14,6 +14,9 @@
     div, img {
         background-color: transparent;
     }
+    img {
+        cursor: pointer;
+    }
     .logo, .menu, .avatar {
         display: flex;
         flex-direction: column;
@@ -31,6 +34,9 @@
         margin-top: 75px;
         height: 200px;
         justify-content: space-between;
+        & img:hover {
+            filter: brightness(0) invert(1);
+        }
     }
     .avatar {
         margin-bottom: 32px;
