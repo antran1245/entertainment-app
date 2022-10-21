@@ -9,7 +9,6 @@ import '../sass/trending.scss'
 export default function Trending() {
     const trending = data.filter((item) => item.isTrending)
     const imagesSmall = trending.map((item) => item.thumbnail.trending.small.slice(item.thumbnail.trending.small.split('/',3).join('/').length))
-    console.log(trending)
 
     return(
         <Row id='trending'>

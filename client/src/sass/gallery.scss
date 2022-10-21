@@ -10,6 +10,10 @@
 #gallery-content {
     margin-top: 32px;
     .card {
+        background-color: transparent;
+        .card-img-top {
+            border-radius: var(--bs-card-inner-border-radius);
+        }
         background-color: none !important;
         margin-bottom: 32px;
         .card-img-overlay {
