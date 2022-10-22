@@ -8,8 +8,13 @@ import categoryTV from '../assets/icon-category-tv.svg'
 import '../sass/gallery.scss'
 
 export default function Gallery() {
-    const gallery = useContext(DataContext)
+    const data = useContext(DataContext)
+    const gallery = data
     const imagesSmall = gallery.data.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
+    
+    const bookmark = (index) => {
+        gallery.bookmark(index)
+    }
     return(
         <Row id="gallery">
             <Row>
@@ -21,8 +26,8 @@ export default function Gallery() {
                         <Card className='text-white border-0'>
                             <Card.Img variant="top" src={require("../assets/thumbnails"+imagesSmall[index])} alt={item.title}/>
                             <Card.ImgOverlay>
-                                <Card.Text className="bookmark">
-                                    <img src={bookmarkEmpty} alt="bookmark"/>
+                                <Card.Text className="bookmark" onClick={() => bookmark(index)}>
+                                    <img src={item.isBookmarked? bookmarkFull : bookmarkEmpty} alt="bookmark"/>
                                 </Card.Text>
                             </Card.ImgOverlay>
                             <Card.Body>

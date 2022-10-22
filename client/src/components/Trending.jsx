@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react'
+import { useContext } from 'react'
 import { Row, Card } from 'react-bootstrap'
 import { DataContext } from '../context/dataContext'
 import bookmarkEmpty from '../assets/icon-bookmark-empty.svg'
@@ -9,19 +9,13 @@ import '../sass/trending.scss'
 
 export default function Trending() {
     const trending = useContext(DataContext)
-    const [isTrending, setIsTrending] = useState(trending.data.filter((item) => item.isTrending))
+    const isTrending = trending.data.filter((item) => item.isTrending)
     const imagesSmall = isTrending.map((item) => item.thumbnail.trending.small.slice(item.thumbnail.trending.small.split('/',3).join('/').length))
-    const [changeBookmark, setChangeBookmark] = useState(true)
-
-    useEffect(() => {
-        setIsTrending(trending.data.filter((item) => item.isTrending))
-    }, [changeBookmark])
 
     const bookmark = (index) => {
         let bookmark = isTrending[index]
         let trendIndex = trending.data.findIndex((item) => item.title === bookmark.title)
         trending.bookmark(trendIndex)
-        setChangeBookmark(!changeBookmark)
     }
 
     return(
