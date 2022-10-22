@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Home from './components/Home'
 import './App.css'
@@ -13,7 +14,11 @@ function App() {
         </Col>
         <Col md={12} lg={11} xl={11} xxl={11} id='main-content p-0'>
           <Context>
-            <Home/>
+            <BrowserRouter>
+              <Routes>
+                <Route path='' element={<Home/>}/>
+              </Routes>
+            </BrowserRouter>
           </Context>
         </Col>
       </Row>
