@@ -22,7 +22,7 @@ export default function Gallery() {
             </Row>
             <Row id="gallery-content">
                 {gallery.data.map((item, index) => {
-                    return <Col sm={3} md={3} lg={3} xl={2} key={index}>
+                    return <Col xs={6} sm={4} md={4} lg={3} xl={2} key={index}>
                         <Card className='text-white border-0'>
                             <Card.Img variant="top" src={require("../assets/thumbnails"+imagesSmall[index])} alt={item.title}/>
                             <Card.ImgOverlay>

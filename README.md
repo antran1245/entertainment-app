@@ -35,3 +35,4 @@ Create an entertainment application for users to view Movie and TV series. Creat
 ### Packages
 - SASS
 - react-bootstrap
+- react-router-dom

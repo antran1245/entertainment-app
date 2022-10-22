@@ -70,3 +70,17 @@
         }
     }
 }
+
+@media only screen and (max-width: 576px) {
+    #gallery {
+        margin-top: 24px;
+        h2 {
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.3125px;
+        }
+        #gallery-content {
+            margin-top: 24px;
+        }
+    }
+}

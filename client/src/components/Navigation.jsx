@@ -1,4 +1,5 @@
 import { Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import home from '../assets/icon-nav-home.svg'
 import movies from '../assets/icon-nav-movies.svg'
@@ -14,8 +15,12 @@ export default function Navigation() {
                     <img src={logo} alt='logo icon'/>
                 </div>
                 <div className='menu'>
-                    <img src={home} alt="home icon"/>
-                    <img src={movies} alt="movies icon"/>
+                    <Link to={'/'}>
+                        <img src={home} alt="home icon"/>
+                    </Link>
+                    <Link to={'/movies'}>
+                        <img src={movies} alt="movies icon"/>
+                    </Link>
                     <img src={tv} alt="tv icon"/>
                     <img src={bookmark} alt="bookmark icon"/>
                 </div>

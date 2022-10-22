@@ -10,7 +10,7 @@ export default function SearchBar() {
                 <InputGroup.Text>
                     <img src={search} alt="search" />
                 </InputGroup.Text>
-                <Form.Control placeholder='Search for movies or TV series'/>
+                    <Form.Control placeholder='Search for movies or TV series'/>
                 </InputGroup>
             </Col>
         </Row>
