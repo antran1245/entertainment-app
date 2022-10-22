@@ -2,6 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Navigation from './components/Navigation'
 import Home from './components/Home'
 import './App.css'
+import Context from './context/dataContext';
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
           <Navigation/>
         </Col>
         <Col md={12} lg={11} xl={11} xxl={11} id='main-content p-0'>
-          <Home/>
+          <Context>
+            <Home/>
+          </Context>
         </Col>
       </Row>
     </Container>

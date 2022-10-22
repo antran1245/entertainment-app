@@ -1,22 +1,22 @@
+import { useContext } from "react"
 import { Row, Col, Card } from "react-bootstrap"
+import { DataContext } from "../context/dataContext"
 import bookmarkFull from '../assets/icon-bookmark-full.svg'
 import bookmarkEmpty from '../assets/icon-bookmark-empty.svg'
 import categoryMovie from '../assets/icon-category-movie.svg'
 import categoryTV from '../assets/icon-category-tv.svg'
-import data from '../data.json'
 import '../sass/gallery.scss'
 
 export default function Gallery() {
-    const gallery = data
-    const imagesSmall = gallery.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
-    console.log(gallery)
+    const gallery = useContext(DataContext)
+    const imagesSmall = gallery.data.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
     return(
         <Row id="gallery">
             <Row>
                 <h2>Recommended for you</h2>
             </Row>
             <Row id="gallery-content">
-                {gallery.map((item, index) => {
+                {gallery.data.map((item, index) => {
                     return <Col sm={3} md={3} lg={3} xl={2} key={index}>
                         <Card className='text-white border-0'>
                             <Card.Img variant="top" src={require("../assets/thumbnails"+imagesSmall[index])} alt={item.title}/>
