@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Row, Col, Card } from "react-bootstrap"
 import { DataContext } from "../context/dataContext"
 import bookmarkFull from '../assets/icon-bookmark-full.svg'
@@ -7,10 +7,10 @@ import categoryMovie from '../assets/icon-category-movie.svg'
 import categoryTV from '../assets/icon-category-tv.svg'
 import '../sass/gallery.scss'
 
-export default function Gallery() {
+export default function Gallery({searching}) {
     const data = useContext(DataContext)
-    const gallery = data
-    const imagesSmall = gallery.data.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
+    const gallery = data.data.filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))
+    const imagesSmall = gallery.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
     
     const bookmark = (index) => {
         gallery.bookmark(index)
@@ -18,10 +18,10 @@ export default function Gallery() {
     return(
         <Row id="gallery">
             <Row>
-                <h2>Recommended for you</h2>
+                <h2>{searching === ''? 'Recommended for you' : `Found ${gallery.length} ${gallery.length > 1? 'results': 'result'} for '${searching}'`}</h2>
             </Row>
             <Row id="gallery-content">
-                {gallery.data.map((item, index) => {
+                {gallery.map((item, index) => {
                     return <Col xs={6} sm={4} md={4} lg={3} xl={2} key={index}>
                         <Card className='text-white border-0'>
                             <Card.Img variant="top" src={require("../assets/thumbnails"+imagesSmall[index])} alt={item.title}/>
