@@ -11,7 +11,7 @@ export default function Home() {
     const data = useContext(DataContext)
     const gallery = data.data.filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))
     const imagesSmall = gallery.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
-    
+
     const bookmark = (index) => {
         data.bookmark(index)
     }

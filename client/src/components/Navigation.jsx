@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom'
+import { useLayoutEffect } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import home from '../assets/icon-nav-home.svg'
 import movies from '../assets/icon-nav-movies.svg'
@@ -7,6 +8,10 @@ import bookmark from '../assets/icon-nav-bookmark.svg'
 import '../sass/navigation.scss'
 
 export default function Navigation() {
+    const location = useLocation()
+    useLayoutEffect(() => {
+        window.scrollTo(0,-100)
+    },[location.pathname])
     return(
         <nav id='navigation'>
             <div>
