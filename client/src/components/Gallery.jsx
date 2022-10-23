@@ -1,20 +1,11 @@
-import { useContext, useEffect, useState } from "react"
 import { Row, Col, Card } from "react-bootstrap"
-import { DataContext } from "../context/dataContext"
 import bookmarkFull from '../assets/icon-bookmark-full.svg'
 import bookmarkEmpty from '../assets/icon-bookmark-empty.svg'
 import categoryMovie from '../assets/icon-category-movie.svg'
 import categoryTV from '../assets/icon-category-tv.svg'
 import '../sass/gallery.scss'
 
-export default function Gallery({searching}) {
-    const data = useContext(DataContext)
-    const gallery = data.data.filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))
-    const imagesSmall = gallery.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
-    
-    const bookmark = (index) => {
-        gallery.bookmark(index)
-    }
+export default function Gallery({searching, gallery, imagesSmall,  bookmark}) {
     return(
         <Row id="gallery">
             <Row>

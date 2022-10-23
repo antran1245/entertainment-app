@@ -1,4 +1,3 @@
-import { Row, Col } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import home from '../assets/icon-nav-home.svg'
