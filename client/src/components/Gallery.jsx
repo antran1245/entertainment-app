@@ -26,7 +26,7 @@ export default function Gallery({searching, gallery, imagesSmall,  bookmark}) {
                                     <span className="info">
                                         <span>2019</span>
                                         <span>&#183;</span>
-                                        <span>
+                                        <span className='catergory'>
                                             <img src={item.category === "Movie"? categoryMovie : categoryTV} alt="category"/> {item.category === "Movie"? "Movie" : "TV Series"}
                                         </span>
                                         <span>&#183;</span>
