@@ -25,7 +25,9 @@ export default function Navigation() {
                     <NavLink to={'movies'} className={({isActive}) => isActive ? 'active': ''}>
                         <img src={movies} alt="movies icon"/>
                     </NavLink>
-                    <img src={tv} alt="tv icon"/>
+                    <NavLink to={'tvseries'} className={({isActive}) => isActive ? 'active': ''}>
+                        <img src={tv} alt="tv icon"/>
+                    </NavLink>
                     <img src={bookmark} alt="bookmark icon"/>
                 </div>
             </div>

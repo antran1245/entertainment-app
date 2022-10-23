@@ -61,6 +61,14 @@
                     line-height: 16px;
                 }
             }
+            .info .catergory {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img {
+                    margin-right: 6px;
+                }
+            }
             .title {
                 font-size: 18px;
                 font-weight: 500;
