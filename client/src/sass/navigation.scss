@@ -34,6 +34,14 @@
         margin-top: 75px;
         height: 200px;
         justify-content: space-between;
+        a {
+            background-color: transparent;
+        }
+        .active {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
         & img:hover {
             filter: brightness(0) invert(1);
         }
