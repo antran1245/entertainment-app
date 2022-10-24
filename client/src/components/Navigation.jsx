@@ -16,7 +16,9 @@ export default function Navigation() {
         <nav id='navigation'>
             <div>
                 <div className='logo'>
-                    <img src={logo} alt='logo icon'/>
+                    <NavLink to={''}>
+                        <img src={logo} alt='logo icon'/>
+                    </NavLink>
                 </div>
                 <div className='menu'>
                     <NavLink to={''} className={({isActive}) => isActive ? 'active' : ''} end>
