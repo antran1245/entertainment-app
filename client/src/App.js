@@ -5,6 +5,7 @@ import Navigation from './components/Navigation'
 import Home from './components/Home'
 import Movies from './components/Movies';
 import TVSeries from './components/TVSeries';
+import Bookmark from './components/Bookmark';
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                   <Route path='' element={<Home/>}/>
                   <Route path='movies' element={<Movies/>}/>
                   <Route path='tvseries' element={<TVSeries/>}/>
+                  <Route path='bookmark' element={<Bookmark/>}/>
                 </Routes>
             </Context>
           </Col>
