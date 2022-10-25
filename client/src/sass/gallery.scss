@@ -8,75 +8,7 @@
     }
 }
 #gallery-content {
-    margin-top: 32px;
-    .card {
-        background-color: transparent;
-        .card-img-top {
-            border-radius: var(--bs-card-inner-border-radius);
-        }
-        background-color: none !important;
-        margin-bottom: 32px;
-        .card-img-overlay {
-            background-color: rgba($color: #000000, $alpha: .01);
-            display: flex;
-            justify-content: flex-end;
-            .bookmark {
-                background-color: rgba($color: #000000, $alpha: .5);
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                img {
-                    width: 12px;
-                    height: 14px;
-                    background-color: rgba($color: #000000, $alpha: .01);
-                }
-                &:hover {
-                    background-color: rgba($color: #ffffff, $alpha: 1.0);
-                    img {
-                        filter: invert(1);
-                    }
-                }
-            }
-        }
-        .card-body {
-            padding: 0;
-        }
-        .card-info {
-            display: flex;
-            flex-direction: column;
-            .info {
-                margin-top: 8px;
-                display: flex;
-                justify-content: space-between;
-                width: 137px;
-                height: 16px;
-                span{
-                    font-size: 13px;
-                    font-weight: 300;
-                    opacity: .75;
-                    line-height: 16px;
-                }
-            }
-            .info .catergory {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                img {
-                    margin-right: 6px;
-                }
-            }
-            .title {
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 23px;
-                margin-top: 5px;
-            }
-        }
-    }
+    margin-top: 32px
 }
 
 @media only screen and (max-width: 576px) {
