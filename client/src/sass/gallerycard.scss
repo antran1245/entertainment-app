@@ -1,15 +1,11 @@
 .card {
     cursor: pointer;
-    background-color: transparent;
-    .card-img-top {
-        border-radius: var(--bs-card-inner-border-radius);
-    }
-    background-color: none !important;
     margin-bottom: 32px;
     .card-img-overlay {
         background-color: rgba($color: #000000, $alpha: .01);
         display: flex;
         justify-content: flex-end;
+        height: 174px;
         .bookmark {
             background-color: rgba($color: #000000, $alpha: .5);
             width: 32px;
@@ -31,7 +27,21 @@
                 }
             }
         }
+        .play {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+        }
     }
+    .overlay {
+        filter: brightness(.5);
+    }
+
     .card-body {
         padding: 0;
     }
