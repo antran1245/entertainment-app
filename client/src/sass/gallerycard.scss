@@ -35,7 +35,15 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: transparent;
+            width: 117px;
+            height: 48px;
+            background-color: rgba($color: #FFFFFF, $alpha: .25);
+            border-radius: 28.5px;
+            display: flex;
+            justify-content: space-evenly;
+            img {
+                background-color: transparent;
+            }
         }
     }
     .overlay {
