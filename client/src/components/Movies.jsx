@@ -19,7 +19,7 @@ export default function Movies() {
     return(
         <Container fluid id="movies">
             <SearchBar setSearching={setSearching}/>
-            <Gallery searching={searching} gallery={movies} imagesSmall={imagesSmall} bookmark={bookmark}/>
+            <Gallery searching={searching} gallery={movies} imagesSmall={imagesSmall} bookmark={bookmark} heading={"Movies"}/>
         </Container>
     )
 }

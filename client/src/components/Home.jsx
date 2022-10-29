@@ -22,7 +22,7 @@ export default function Home() {
             {searching === '' && 
                 <Trending/>
             }
-            <Gallery searching={searching} gallery={gallery} imagesSmall={imagesSmall} bookmark={bookmark}/>
+            <Gallery searching={searching} gallery={gallery} imagesSmall={imagesSmall} bookmark={bookmark} heading={"Recommended for you"}/>
         </Container>
     );
 }

@@ -19,7 +19,7 @@ export default function TVSeries() {
     return(
         <Container fluid id="tvseries">
             <SearchBar setSearching={setSearching}/>
-            <Gallery searching={searching} gallery={tvseries} imagesSmall={imagesSmall} bookmark={bookmark}/>
+            <Gallery searching={searching} gallery={tvseries} imagesSmall={imagesSmall} bookmark={bookmark} heading={"TV Series"}/>
         </Container>
     )
 }
