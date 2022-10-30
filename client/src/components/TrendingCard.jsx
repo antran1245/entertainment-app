@@ -11,7 +11,7 @@ export default function TrendingCard({item, image, bookmark, index}) {
     const [hovered, isHovered] = useState(false)
     return (
         <Card className='bg-dark text-white' key={index} onMouseOver={() => isHovered(true)} onMouseLeave={() => isHovered(false)}>
-            <Card.Img src={require('../assets/thumbnails'+image)} alt={item.title} height="100%"/>
+            <Card.Img src={require('../assets/thumbnails'+image)} alt={item.title} height="100%" className={hovered && 'overlay'}/>
             <Card.ImgOverlay>
                 {hovered &&
                 <Card.Text className='play'>
