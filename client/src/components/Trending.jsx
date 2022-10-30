@@ -1,10 +1,7 @@
 import { useContext } from 'react'
-import { Row, Card } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import { DataContext } from '../context/dataContext'
-import bookmarkEmpty from '../assets/icon-bookmark-empty.svg'
-import bookmarkFull from '../assets/icon-bookmark-full.svg'
-import categoryMovie from '../assets/icon-category-movie.svg'
-import categoryTV from '../assets/icon-category-tv.svg'
+import TrendingCard from './TrendingCard'
 import '../sass/trending.scss'
 
 export default function Trending() {
@@ -25,27 +22,7 @@ export default function Trending() {
             </div>
             <div id='trending-content' className='ps-0'>
                 {isTrending.length > 0 && isTrending.map((item, index) => {
-                    return <Card className='bg-dark text-white' key={index}>
-                        <Card.Img src={require('../assets/thumbnails'+imagesSmall[index])} alt={item.title} height="100%"/>
-                        <Card.ImgOverlay>
-                            <Card.Text className='bookmark' onClick={() => bookmark(index)}>
-                                <img src={item.isBookmarked? bookmarkFull : bookmarkEmpty} alt="bookmarkEmpty-icon"/>
-                            </Card.Text>
-                            <Card.Text className='card-info'>
-                                <span className='info'>
-                                    <span>{item.year}</span>
-                                    <span>&#183;</span>
-                                    <span className='catergory'>
-                                        <img src={item.category === "Movie"? categoryMovie : categoryTV} alt="category"/>
-                                        {item.category}
-                                    </span>
-                                    <span>&#183;</span>
-                                    <span>{item.rating}</span>
-                                </span>
-                                <span className='title'>{item.title}</span>
-                            </Card.Text>
-                        </Card.ImgOverlay>
-                    </Card>
+                    return <TrendingCard item={item} image={imagesSmall[index]} bookmark={bookmark} index={index} key={index} />
                 })}
             </div>
         </Row>
