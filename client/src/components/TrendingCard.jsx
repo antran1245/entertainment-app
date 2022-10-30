@@ -3,6 +3,7 @@ import bookmarkEmpty from '../assets/icon-bookmark-empty.svg'
 import bookmarkFull from '../assets/icon-bookmark-full.svg'
 import categoryMovie from '../assets/icon-category-movie.svg'
 import categoryTV from '../assets/icon-category-tv.svg'
+import '../sass/trendingcard.scss'
 
 export default function TrendingCard({item, image, bookmark, index}) {
     return (
