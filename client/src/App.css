@@ -11,9 +11,3 @@
 *::-webkit-scrollbar {
   display: none;
 }
-
-@media only screen and (max-width: 992px) {
-  .nav-col {
-    padding: 24px;
-  }
-}

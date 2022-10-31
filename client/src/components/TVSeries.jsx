@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap'
 import { DataContext } from '../context/dataContext'
 import Gallery from './Gallery'
 import SearchBar from './SearchBar'
-import '../sass/tvseries.scss'
 
 export default function TVSeries() {
     const [searching, setSearching] = useState('')

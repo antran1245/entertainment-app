@@ -12,21 +12,10 @@
     margin-top: 25px;
     width: calc(100% - 12px) !important;
 }
-h2 {
-    font-size: 32px;
-    font-weight: 300;
-    line-height: 40px;
-    letter-spacing: -0.5px;
-}
 
 @media only screen and (max-width: 576px) {
     #trending {
         margin-top: 24px;
-        h2 {
-            font-size: 20px;
-            line-height: 25px;
-            letter-spacing: -0.3125px;
-        }
         #trending-content {
             margin-top: 16px;
         }

@@ -1,11 +1,5 @@
 #gallery {
     margin-top: 40px;
-    h2 {
-        font-size: 32px;
-        font-weight: 300;
-        line-height: 40px;
-        letter-spacing: -0.5px;
-    }
 }
 #gallery-content {
     margin-top: 32px
@@ -14,11 +8,6 @@
 @media only screen and (max-width: 576px) {
     #gallery {
         margin-top: 24px;
-        h2 {
-            font-size: 20px;
-            line-height: 25px;
-            letter-spacing: -0.3125px;
-        }
         #gallery-content {
             margin-top: 24px;
         }

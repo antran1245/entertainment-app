@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import { DataContext } from "../context/dataContext"
 import Gallery from "./Gallery";
 import SearchBar from "./SearchBar";
-import '../sass/movies.scss'
 
 export default function Movies() {
     const [searching, setSearching] = useState('')

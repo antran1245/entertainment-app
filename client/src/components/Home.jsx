@@ -4,7 +4,6 @@ import { DataContext } from "../context/dataContext"
 import SearchBar from './SearchBar'
 import Trending from './Trending'
 import Gallery from './Gallery'
-import '../sass/home.scss'
 
 export default function Home() {
     const [searching, setSearching] = useState('')

@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap'
 import { DataContext } from '../context/dataContext'
 import Gallery from './Gallery'
 import SearchBar from './SearchBar'
-import '../sass/bookmark.scss'
 
 export default function Bookmark() {
     const [searching, setSearching] = useState('')
