@@ -33,6 +33,13 @@ Create an entertainment application for users to view Movie and TV series. Creat
 `yarn start` or `npm start`
 
 ### Packages
+
+**Front End**
 - SASS
 - react-bootstrap
 - react-router-dom
+
+**Back End**
+- Express JS
+- mongoose
+- cors
