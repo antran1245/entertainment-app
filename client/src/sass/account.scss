@@ -1,0 +1,63 @@
+#account {
+    .logo {
+        margin-top: 78.41px;
+    }
+    .box {
+        margin-top: 83px;
+        .form-box {
+            * {
+                background-color: transparent;
+            }
+            padding: 32px;
+            background-color: #161D2F;
+            border-radius: 20px;
+            width: 400px;
+            font-family: 'Outfit', normal;
+            font-weight: 300;
+            form {
+                h2 {
+                    margin-bottom: 40px;
+                    font-size: 32px;
+                    line-height: 40px;
+                    letter-spacing: -0.5px;
+                }
+                input {
+                    color: white;
+                    caret-color: #FC4747;
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: 1px solid #5A698F;
+                    margin-top: 24px;
+                    height: 37px;
+                    font-size: 15px;
+                    line-height: 19px;
+                    &:focus {
+                        box-shadow: none;
+                        border-bottom: 1px solid #FFFFFF;
+                    }
+                }
+                .submit {
+                    border: none;
+                    margin-top: 40px;
+                    height: 48px;
+                    background-color: #FC4747;
+                    border-radius: 6px;
+                    font-size: 15px;
+                    line-height: 19px;
+                    &:active {
+                        background-color: #FFFFFF;
+                        color: #161D2F;
+                    }
+                }
+            }
+            .switch {
+                margin-top: 24px;
+                text-align: center;
+                span {
+                    color: #FC4747;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

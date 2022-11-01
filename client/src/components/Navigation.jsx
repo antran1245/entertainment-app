@@ -36,7 +36,9 @@ export default function Navigation() {
                 </div>
             </div>
             <div className='avatar'>
-                <img src={require('../assets/image-avatar.png')} alt="avatar icon"/>
+                <NavLink to={'account'}>
+                    <img src={require('../assets/image-avatar.png')} alt="avatar icon"/>
+                </NavLink>
             </div>
         </nav>
     );
