@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react'
-import file from '../data.json'
 
 export const DataContext = createContext();
 export default function Context(props) {
@@ -11,7 +10,7 @@ export default function Context(props) {
         .then((data) => setData(data))
         .catch((err) => console.log(err))
     }, [])
-    
+
     const bookmark = (index) => {
         data[index].isBookmarked = data[index].isBookmarked === true? false : true
         setData([...data])

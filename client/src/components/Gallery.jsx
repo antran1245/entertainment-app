@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Row } from "react-bootstrap"
 import GalleryCard from "./GalleryCard";
 import '../sass/gallery.scss'

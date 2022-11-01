@@ -13,16 +13,23 @@ export default function Bookmark() {
     const imagesSmallMovie = bookmarkMovie.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
     const imagesSmallTVSeries = bookmarkTVSeries.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
 
-    const bookmarking = (index) => {
-        let title = bookmark[index].title
-        index = data.data.findIndex((item) => item.title === title)
+    const bookmarkingMovies = (index) => {
+        let title = bookmarkMovie[index].title
+        bookmarking(title)
+    }
+    const bookmarkingTVSeries = (index) => {
+        let title = bookmarkTVSeries[index].title
+        bookmarking(title)
+    }
+    const bookmarking = (title) => {
+        let index = data.data.findIndex((item) => item.title === title)
         data.bookmark(index)
     }
     return(
         <Container fluid id="bookmark">
             <SearchBar setSearching={setSearching}/>
-            <Gallery searching={searching} gallery={bookmarkMovie} imagesSmall={imagesSmallMovie} bookmark={bookmarking} heading={"Bookmarked Movies"}/>
-            <Gallery searching={searching} gallery={bookmarkTVSeries} imagesSmall={imagesSmallTVSeries} bookmark={bookmarking} heading={"Bookmarked TV Series"}/>
+            <Gallery searching={searching} gallery={bookmarkMovie} imagesSmall={imagesSmallMovie} bookmark={bookmarkingMovies} heading={"Bookmarked Movies"}/>
+            <Gallery searching={searching} gallery={bookmarkTVSeries} imagesSmall={imagesSmallTVSeries} bookmark={bookmarkingTVSeries} heading={"Bookmarked TV Series"}/>
         </Container>
     )
 }
