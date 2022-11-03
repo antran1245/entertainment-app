@@ -21,19 +21,29 @@
                     line-height: 40px;
                     letter-spacing: -0.5px;
                 }
-                input {
-                    color: white;
-                    caret-color: #FC4747;
-                    border: none;
-                    border-radius: 0;
-                    border-bottom: 1px solid #5A698F;
+                .form-group {
                     margin-top: 24px;
-                    height: 37px;
-                    font-size: 15px;
-                    line-height: 19px;
-                    &:focus {
-                        box-shadow: none;
+                    &>*{
+                        margin-bottom: 17px;
+                    }
+                    input {
+                        color: white;
+                        caret-color: #FC4747;
+                        border: none;
+                        border-radius: 0;
+                        height: 37px;
+                        font-size: 15px;
+                        line-height: 19px;
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                    border-bottom: 1px solid #5A698F;
+                    &:focus-within {
                         border-bottom: 1px solid #FFFFFF;
+                    }
+                    small {
+                        color: #FC4747;
                     }
                 }
                 .submit {
