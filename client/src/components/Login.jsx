@@ -37,7 +37,7 @@ export default function Login({setLogin}) {
             </Form>
             <div className="switch">
                 <p>
-                    Don't have an account? <span onClick={() => setLogin(false)}>Sign Up</span>
+                    Don't have an account? &nbsp;<span onClick={() => setLogin(false)}>Sign Up</span>
                 </p>
             </div>
         </div>
