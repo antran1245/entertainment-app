@@ -10,6 +10,18 @@ export default function SignUp({setLogin}) {
         setErrors({email: form.email === '', password: form.password === '', repeat: form.repeat === ''? "Can't be empty": ''})
         if(form.password !== form.repeat) {
             setErrors({...errors, repeat: 'Password Not Match'})
+        } else {
+            fetch('http://localhost:8000/api/register', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({...form})
+            })
+            // .then((resp) => resp.json())
+            // .then((data) => console.log(data))
+            .catch((err) => console.log(err))
         }
     }
     return(
