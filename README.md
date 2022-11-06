@@ -36,10 +36,20 @@ Create an entertainment application for users to view Movie and TV series. Creat
 
 **Front End**
 - SASS
+    - Styling of components
 - react-bootstrap
+    - framework
 - react-router-dom
+    - dynamic routing of pages
 
 **Back End**
+- MongoDB
+    - database
 - Express JS
+    - back end web framework
 - mongoose
+    - interaction between database and server
 - cors
+    - allow secure request from front end to back end
+- bcrypt
+    - password security 
