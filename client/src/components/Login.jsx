@@ -8,6 +8,19 @@ export default function Login({setLogin}) {
     const formFilled = (e) => {
         e.preventDefault()
         setErrors({email: form.email === '', password: form.password === ''})
+        if(!errors.email && !errors.password) {
+            fetch('http://localhost:8000/api/login', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({...form})
+            })
+            .then((resp) => resp.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
+        }
     }
     return(
         <div className="form-box">

@@ -10,7 +10,7 @@ export default function SignUp({setLogin}) {
         setErrors({email: form.email === '', password: form.password === '', repeat: form.repeat === ''? "Can't be empty": ''})
         if(form.password !== form.repeat) {
             setErrors({...errors, repeat: 'Password Not Match'})
-        } else {
+        } else if(!errors.email && !errors.password && errors.repeat === '') {
             fetch('http://localhost:8000/api/register', {
                 method: 'POST',
                 headers: {
