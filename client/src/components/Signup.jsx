@@ -29,33 +29,33 @@ export default function SignUp({setLogin}) {
             <Form onSubmit={formFilled}>
                 <h2>Sign Up</h2>
                 <Form.Group className="form-group" as={Row}>
-                    <Col xs={6} className={`p-0 ${!errors.email && 'w-100'}`}>
+                    <Col xs={6} className={`p-0 ${!errors.email ? 'w-100': ''}`}>
                         <Form.Control type="text" placeholder="Email address" className="ps-1 pe-0 mt-0" value={form.email} onChange={(e) => setForm({...form, email: e.target.value})}/>
                     </Col>
-                    {errors.email && 
+                    {errors.email ? 
                     <Col xs={6} className="d-flex justify-content-center align-items-center">
                         <Form.Text className="mt-0">Can't be empty</Form.Text>
-                    </Col>
+                    </Col> : null
                     }
                 </Form.Group>
                 <Form.Group className="form-group" as={Row}>
-                    <Col xs={6} className={`p-0 ${!errors.password && 'w-100'}`}>
+                    <Col xs={6} className={`p-0 ${!errors.password ? 'w-100': ''}`}>
                         <Form.Control type="text" placeholder="Password" className="ps-1 pe-0 mt-0" value={form.password} onChange={(e) => setForm({...form, password: e.target.value})}/>
                     </Col>
-                    {errors.password && 
+                    {errors.password ? 
                     <Col xs={6} className="d-flex justify-content-center align-items-center">
                         <Form.Text className="mt-0">Can't be empty</Form.Text>
-                    </Col>
+                    </Col> : null
                     }
                 </Form.Group>
                 <Form.Group className="form-group" as={Row}>
-                    <Col xs={6} className={`p-0 ${errors.repeat === '' && 'w-100'}`}>
+                    <Col xs={6} className={`p-0 ${errors.repeat === '' ? 'w-100': ''}`}>
                         <Form.Control type="text" placeholder="Repeat Password" className="ps-1 pe-0 mt-0" value={form.repeat} onChange={(e) => setForm({...form, repeat: e.target.value})}/>
                     </Col>
-                    {errors.repeat !== '' && 
+                    {errors.repeat !== '' ? 
                     <Col xs={6} className="d-flex justify-content-center align-items-center">
                         <Form.Text className="mt-0">{errors.repeat}</Form.Text>
-                    </Col>
+                    </Col> : null
                     }
                 </Form.Group>
                 <Button className="submit w-100" type="submit">Create an account</Button>

@@ -7,6 +7,8 @@ import SearchBar from './SearchBar'
 export default function TVSeries() {
     const [searching, setSearching] = useState('')
     const data = useContext(DataContext)
+
+    // Filter out all tv series and further filter out by the search request
     const tvseries = data.data.filter((item) => item.category === "TV Series").filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))
     const imagesSmall = tvseries.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
 

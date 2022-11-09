@@ -13,10 +13,10 @@ export default function TrendingCard({item, image, bookmark, index}) {
         <Card className='bg-dark text-white' key={index} onMouseOver={() => isHovered(true)} onMouseLeave={() => isHovered(false)}>
             <Card.Img src={require('../assets/thumbnails'+image)} alt={item.title} height="100%" className={hovered && 'overlay'}/>
             <Card.ImgOverlay>
-                {hovered &&
+                {hovered ?
                 <Card.Text className='play'>
                     <img src={play} alt="play"/> Play
-                </Card.Text>
+                </Card.Text> : null
                 }
                 <Card.Text className='bookmark' onClick={() => bookmark(index)}>
                     <img src={item.isBookmarked? bookmarkFull : bookmarkEmpty} alt="bookmarkEmpty-icon"/>

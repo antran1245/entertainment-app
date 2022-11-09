@@ -8,6 +8,7 @@ export default function DataContext({children}) {
         fetch('http://localhost:8000/api/videos')
         .then((resp) => resp.json())
         .then((data) => {
+            //remove all default bookmark
             data = data.map(item => item.isBookmarked === false)
             setData(data)
         })

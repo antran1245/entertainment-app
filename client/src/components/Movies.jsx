@@ -7,6 +7,8 @@ import SearchBar from "./SearchBar";
 export default function Movies() {
     const [searching, setSearching] = useState('')
     const data = useContext(DataContext)
+
+    // Filter out all movies and further filter out by the search request
     const movies = data.data.filter((item) => item.category === "Movie").filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))
     const imagesSmall = movies.map((item) => item.thumbnail.regular.small.slice(item.thumbnail.regular.small.split('/', 3).join('/').length))
 

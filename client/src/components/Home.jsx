@@ -18,8 +18,8 @@ export default function Home() {
     return(
         <Container fluid id='home'>
             <SearchBar setSearching={setSearching}/>
-            {searching === '' && 
-                <Trending/>
+            {searching === '' ?
+                <Trending/> : null
             }
             <Gallery searching={searching} gallery={gallery} imagesSmall={imagesSmall} bookmark={bookmark} heading={"Recommended for you"}/>
         </Container>

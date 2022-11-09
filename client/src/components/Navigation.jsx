@@ -9,6 +9,8 @@ import '../sass/navigation.scss'
 
 export default function Navigation() {
     const location = useLocation()
+
+    //Scroll TO -100 on the y axis to make sure it return all the way to the top on every change of pathname
     useLayoutEffect(() => {
         window.scrollTo(0,-100)
     },[location.pathname])

@@ -13,12 +13,12 @@ export default function GalleryCard({item, image, bookmark, index}) {
     return (
         <Col xs={6} sm={4} md={4} lg={3} xl={2}>
             <Card className='text-white border-0' onMouseOver={() => isHovered(true)} onMouseLeave={() => isHovered(false)}>
-                <Card.Img variant="top" src={require("../assets/thumbnails"+image)} alt={item.title} className={hovered && 'overlay'}/>
+                <Card.Img variant="top" src={require("../assets/thumbnails"+image)} alt={item.title} className={hovered ? 'overlay' : ''}/>
                 <Card.ImgOverlay>
-                    {hovered &&
+                    {hovered ?
                     <Card.Text className='play'>
                         <img src={play} alt="play"/> Play
-                    </Card.Text>
+                    </Card.Text> : null
                     }
                     <Card.Text className="bookmark" onClick={() => bookmark(index)}>
                         <img src={item.isBookmarked? bookmarkFull : bookmarkEmpty} alt="bookmark"/>
