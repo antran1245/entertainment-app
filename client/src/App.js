@@ -1,23 +1,26 @@
 import { Container } from 'react-bootstrap'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Context from './context/dataContext';
+import DataContext from './context/dataContext';
 import Main from './components/Main';
 import Account from './components/Account';
 import './App.css'
 import './sass/App.scss'
+import UserContext from './context/userContext';
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Context>
-        <Container fluid>
-          <Routes>
-            <Route path='*' element={<Main />} />
-            <Route path='/account' element={<Account/>}/>
-          </Routes>
-        </Container>
-      </Context>
+      <UserContext>
+        <DataContext>
+          <Container fluid>
+            <Routes>
+              <Route path='*' element={<Main />} />
+              <Route path='/account' element={<Account/>}/>
+            </Routes>
+          </Container>
+        </DataContext>
+      </UserContext>
     </BrowserRouter>
   );
 }

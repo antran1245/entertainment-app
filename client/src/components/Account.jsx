@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Container, Row, Col } from "react-bootstrap"
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import Login from "./Login"
 import SignUp from "./Signup"
@@ -12,7 +13,9 @@ export default function Account() {
         <Container id="account" fluid>
             <Row className="logo d-flex justify-content-center">
                 <Col className="d-flex justify-content-center">
-                    <img src={logo} alt="logo" />
+                    <NavLink to={'/'}>
+                        <img src={logo} alt="logo" />
+                    </NavLink>
                 </Col>
             </Row>
             <Row className="box d-flex justify-content-center">

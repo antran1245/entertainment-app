@@ -1,13 +1,16 @@
 import { createContext, useState, useEffect } from 'react'
 
-export const DataContext = createContext();
-export default function Context(props) {
+export const Context = createContext();
+export default function DataContext({children}) {
     const [data, setData] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:8000/api/videos')
         .then((resp) => resp.json())
-        .then((data) => setData(data))
+        .then((data) => {
+            data = data.map(item => item.isBookmarked === false)
+            setData(data)
+        })
         .catch((err) => console.log(err))
     }, [])
 
@@ -16,8 +19,8 @@ export default function Context(props) {
         setData([...data])
     }
     return (
-        <DataContext.Provider value={{data, setData, bookmark}}>
-            {props.children}
-        </DataContext.Provider>
+        <Context.Provider value={{data, setData, bookmark}}>
+            {children}
+        </Context.Provider>
     )
 }

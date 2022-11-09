@@ -7,7 +7,11 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String
-    }
+    },
+    bookmark: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'videos'
+    }]
 }, {timestamps: true})
 
 UserSchema.pre('save', function(next) {
