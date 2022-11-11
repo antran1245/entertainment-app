@@ -1,12 +1,12 @@
 import { useState, useContext } from "react";
 import { Container } from "react-bootstrap";
-import { DataContext } from "../context/dataContext"
+import { CreateDataContext } from "../context/dataContext"
 import Gallery from "./Gallery";
 import SearchBar from "./SearchBar";
 
 export default function Movies() {
     const [searching, setSearching] = useState('')
-    const data = useContext(DataContext)
+    const data = useContext(CreateDataContext)
 
     // Filter out all movies and further filter out by the search request
     const movies = data.data.filter((item) => item.category === "Movie").filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))

@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import { Row } from 'react-bootstrap'
-import { DataContext } from '../context/dataContext'
+import { CreateDataContext } from '../context/dataContext'
 import TrendingCard from './TrendingCard'
 import '../sass/trending.scss'
 
 export default function Trending() {
-    const trending = useContext(DataContext)
+    const trending = useContext(CreateDataContext)
 
     // Filter out all trending TV Series and Movies
     const isTrending = trending.data.filter((item) => item.isTrending)

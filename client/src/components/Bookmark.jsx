@@ -1,12 +1,12 @@
 import { useState, useContext } from 'react'
 import { Container } from 'react-bootstrap'
-import { DataContext } from '../context/dataContext'
+import { CreateDataContext } from '../context/dataContext'
 import Gallery from './Gallery'
 import SearchBar from './SearchBar'
 
 export default function Bookmark() {
     const [searching, setSearching] = useState('')
-    const data = useContext(DataContext)
+    const data = useContext(CreateDataContext)
     const bookmark = data.data.filter((item) => item.isBookmarked).filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))
     const bookmarkMovie = bookmark.filter((item) => item.category === 'Movie')
     const bookmarkTVSeries = bookmark.filter((item) => item.category === 'TV Series')

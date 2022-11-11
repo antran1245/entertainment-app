@@ -1,12 +1,12 @@
 import { useContext, useState } from 'react'
 import { Container } from 'react-bootstrap'
-import { DataContext } from '../context/dataContext'
+import { CreateDataContext } from '../context/dataContext'
 import Gallery from './Gallery'
 import SearchBar from './SearchBar'
 
 export default function TVSeries() {
     const [searching, setSearching] = useState('')
-    const data = useContext(DataContext)
+    const data = useContext(CreateDataContext)
 
     // Filter out all tv series and further filter out by the search request
     const tvseries = data.data.filter((item) => item.category === "TV Series").filter((item) => item.title.toLowerCase().includes(searching.toLowerCase()))
