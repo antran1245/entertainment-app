@@ -17,7 +17,7 @@ module.exports.login = async(req, res) => {
         let user = await User.findOne({email: email})
         const validPassword = await bcrypt.compare(password, user.password)
         if(validPassword) {
-            res.json({message: 'ok', user: {_id: user._id}})
+            res.json({message: 'ok', user: {_id: user._id, bookmark: user.bookmark}})
         } else {
             res.status(400).json({message: 'Invalid Email/Password'})
         }

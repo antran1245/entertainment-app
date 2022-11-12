@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from 'react'
+import { createContext, useState, useEffect, useContext, useMemo } from 'react'
 import { CreateUserContext } from './userContext';
 
 export const CreateDataContext = createContext();
@@ -22,15 +22,28 @@ export default function DataContext({children}) {
         .catch((err) => console.log(err))
     }, [])
 
-    useEffect(() => {
+    useMemo(() => {
         if(user !== null) {
+            console.log('login ',  user)
             setBookmarkData(user.bookmark)
         }
     }, [user])
 
     const bookmark = (index) => {
-        data[index].isBookmarked = data[index].isBookmarked === true? false : true
-        setData([...data])
+        console.log(data[index], user)
+        if(data[index]._id && user._id) {
+            fetch('http://localhost:8000/api/videos/bookmark', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({videoID: data[index]._id, userID: user._id})
+            })
+            .catch(err => console.log(err))
+        }
+        // data[index].isBookmarked = data[index].isBookmarked === true? false : true
+        // setData([...data])
     }
     return (
         <CreateDataContext.Provider value={{data, setData, bookmark}}>

@@ -1,9 +1,14 @@
+import { useContext } from "react"
 import { useState } from "react"
 import { Button, Form, Row, Col } from "react-bootstrap"
+import { CreateUserContext } from "../context/userContext"
+import { useNavigate } from 'react-router-dom'
 
 export default function Login({setLogin}) {
+    const {setUser} = useContext(CreateUserContext)
     const [errors, setErrors] = useState({email: false, password: false})
     const [form, setForm] = useState({email: '', password: ''})
+    const navigate = useNavigate()
 
     // Send a fetch post to the server for login information
     const formFilled = (e) => {
@@ -19,8 +24,12 @@ export default function Login({setLogin}) {
                 body: JSON.stringify({...form})
             })
             .then((resp) => resp.json())
-            .then((data) => console.log(data))
+            .then((data) => {
+                setUser(data.user)
+                // console.log(data)
+            })
             .catch((err) => console.log(err))
+            navigate('/')
         }
     }
     return(
